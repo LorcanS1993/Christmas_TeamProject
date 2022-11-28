@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Christmas_TeamProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="module" target="19" />
+      <module name="src" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

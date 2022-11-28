@@ -1,0 +1,53 @@
+package ie.atu;
+
+public class TicketInfo {
+
+    //  usr input data
+    public String usr_name;
+    public String usr_occupation;
+    public int usr_age;
+    public String usr_card_num;
+
+    //  output data
+    public String usr_ticket_num;
+
+
+    public TicketInfo(String usr_name, String usr_occupation, int usr_age, String usr_card_num, String usr_ticket_num){
+        this.usr_name = usr_name;
+        this.usr_occupation = usr_occupation;
+        this.usr_age = usr_age;
+        this.usr_card_num = usr_card_num;
+        this.usr_ticket_num = usr_ticket_num;
+    }
+
+    public void setUsr_name(String usr_name) {
+        this.usr_name = usr_name;
+    }
+
+    public void setUsr_occupation(String usr_occupation) {
+        this.usr_occupation = usr_occupation;
+    }
+
+    public void setUsr_age(int usr_age) {
+        this.usr_age = usr_age;
+    }
+
+    public void setUsr_card_num(String usr_card_num) {
+        this.usr_card_num = usr_card_num;
+    }
+
+    public void setUsr_ticket_num(String ticket_num) {
+        this.usr_ticket_num = ticket_num;
+    }
+
+    @Override
+    public String toString() {
+        return "ticketInfo{" +
+                "usr_name='" + usr_name + '\'' +
+                ", usr_occupation='" + usr_occupation + '\'' +
+                ", usr_age=" + usr_age +
+                ", usr_card_num='" + usr_card_num + '\'' +
+                ", usr_ticket_num='" + usr_ticket_num + '\'' +
+                '}';
+    }
+}
