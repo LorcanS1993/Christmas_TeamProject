@@ -27,17 +27,21 @@ public class Main {
             int age = sc.nextInt();
 
             System.out.println("ENTER CARD NUMBER: ");
-            String card_num = sc.nextLine();
+            long card_num = sc.nextLong();
 
             //  ref_num is used for generating a ticket reference number
             //  for loop works but no error correction used. ref num varies in size
             String ref_num = "";
             for(int i = 0; i < 40; i++){
+
+                //  generates letter/number from range 1 - z on ascii table. begin at 1 (49) and ends at z (122)
                 char buffer = (char) (rand.nextInt(73) + '1');
                 if(buffer > '1' && buffer < '9' || buffer > 'a' && buffer < 'z'){
                     ref_num += buffer;
                 } else {
                     i=i;
+
+                    //  generates new letter/number if outside range
                     buffer = (char) (rand.nextInt(73) + '1');
                 }
             }
