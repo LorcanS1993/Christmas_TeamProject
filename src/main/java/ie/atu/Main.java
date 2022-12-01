@@ -21,13 +21,13 @@ public class Main {
 
             System.out.println("\n\n==========================================================\n==========================================================\n\r");
 
-            System.out.print("ENTER NAME: ");
+            System.out.print("ENTER NAME (MUST BE GREATER THAN 2 LETTERS): ");
             ticket.setUsr_name(sc.nextLine());
 
-            System.out.print("\nENTER OCCUPATION: ");
+            System.out.print("\nENTER OCCUPATION (INDIVIDUAL, STUDENT, FAMILY, ELDERLY): ");
             ticket.setUsr_occupation(sc.nextLine());
 
-            System.out.print("\nENTER AGE: ");
+            System.out.print("\nENTER AGE (MUST BE OLDER THAN 16): ");
             ticket.setUsr_age(sc.nextInt());
 
             System.out.print("\nENTER CARD NUMBER: ");
@@ -38,7 +38,7 @@ public class Main {
             sc.nextLine();
 
             ticket.setUsr_ticket_num(generateString());
-            System.out.print("\nTICKET REFERENCE: " + ticket.getUsr_ticket_num());
+            System.out.print("\nTICKET REFERENCE: " + ticket.getUsr_ticket_num() + "\n");
 
             new_ticket.add(ticket);
 

@@ -1,7 +1,5 @@
 package ie.atu;
 
-import java.util.Random;
-
 public class TicketInfo {
 
     //  usr input data
@@ -9,6 +7,8 @@ public class TicketInfo {
     private String usr_occupation;
     private int usr_age;
     private long usr_card_num;
+
+    private String usr_card_type;
 
     //  output data
     private String usr_ticket_num;
@@ -36,13 +36,15 @@ public class TicketInfo {
     public void setUsr_occupation(String usr_occupation) {
         switch (usr_occupation){
             case "Student":
-            case "student":
+            case "student": this.usr_occupation = "student";
+            break;
             case "Elderly":
-            case "elderly":
+            case "elderly": this.usr_occupation = "elderly";
+            break;
             case "Family":
-            case "family":
+            case "family":  this.usr_occupation = "family";
             case "Individual":
-            case "individual": this.usr_occupation = usr_occupation;
+            case "individual": this.usr_occupation = "individual";
             break;
             default:    throw new IllegalArgumentException("Wrong input please try again");
         }
@@ -58,11 +60,27 @@ public class TicketInfo {
     }
 
     public void setUsr_card_num(long usr_card_num) {
-        this.usr_card_num = usr_card_num;
+        String array = Long.toString(usr_card_num);
+
+        if(array.toCharArray().length < 12 || array.toCharArray().length > 12){
+            throw new IllegalArgumentException("Incorrect digit count in credit card");
+        }
+
+        if(array.toCharArray()[0] == '3'){
+            this.usr_card_type = "American Express";
+        } else if (array.toCharArray()[0] == '4') {
+             this.usr_card_type = "Visa Card";
+        } else if (array.toCharArray()[0] == '5') {
+            this.usr_card_type = "Mastercard";
+        } else if (array.toCharArray()[0] == '6') {
+            this.usr_card_type = "Discovery Cards";
+        } else {
+            throw new IllegalArgumentException("Incorrect card digits");
+        }
     }
 
     public void setUsr_ticket_num(String ticket_num) {
-        if(ticket_num.toCharArray().length > 20 || ticket_num.toCharArray().length < 20){
+        if(ticket_num.toCharArray().length > 16 || ticket_num.toCharArray().length < 16){
             throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS");
         } else {
             this.usr_ticket_num = ticket_num;
@@ -100,6 +118,6 @@ public class TicketInfo {
                 ", usr_age=" + usr_age +
                 ", usr_card_num='" + usr_card_num + '\'' +
                 ", usr_ticket_num='" + usr_ticket_num + '\'' +
-                '}';
+                "}\n";
     }
 }
