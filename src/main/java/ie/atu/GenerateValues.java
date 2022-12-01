@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class GenerateValues {
 
+    //  generates 20 digit string using 1-9 and a-z values
     public static String generateString(){
         Random rand = new Random();
 

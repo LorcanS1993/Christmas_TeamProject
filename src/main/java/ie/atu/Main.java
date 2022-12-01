@@ -17,30 +17,32 @@ public class Main {
         List<TicketInfo> new_ticket = new ArrayList<>();
 
         while(true){
-            System.out.println("\n==========================================================\n" + new_ticket.toString() + "\n==========================================================\n\r");
+            TicketInfo ticket = new TicketInfo();
 
-            System.out.println("ENTER NAME: ");
-            String name = sc.nextLine();
+            System.out.println("\n\n==========================================================\n==========================================================\n\r");
 
-            System.out.println("ENTER OCCUPATION: ");
-            String occupation = sc.nextLine();
+            System.out.print("ENTER NAME: ");
+            ticket.setUsr_name(sc.nextLine());
 
-            System.out.println("ENTER AGE: ");
-            int age = sc.nextInt();
+            System.out.print("\nENTER OCCUPATION: ");
+            ticket.setUsr_occupation(sc.nextLine());
 
-            System.out.println("ENTER CARD NUMBER: ");
-            long card_num = sc.nextLong();
+            System.out.print("\nENTER AGE: ");
+            ticket.setUsr_age(sc.nextInt());
 
-            // consumes nextline left-over
+            System.out.print("\nENTER CARD NUMBER: ");
+            ticket.setUsr_card_num(sc.nextLong());
+
+            // consumes nextlong left-over
             // DO NOT REMOVE FROM CODE
             sc.nextLine();
 
-            String ticket_num = generateString();
-            System.out.println("TICKET REFERENCE: " + ticket_num);
+            ticket.setUsr_ticket_num(generateString());
+            System.out.print("\nTICKET REFERENCE: " + ticket.getUsr_ticket_num());
 
-            new_ticket.add(new TicketInfo(name, occupation, age, card_num, ticket_num));
+            new_ticket.add(ticket);
 
-
+            System.out.printf(new_ticket.toString());
         }
     }
 }
