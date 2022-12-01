@@ -36,14 +36,18 @@ public class TicketInfo {
     public void setUsr_occupation(String usr_occupation) {
         switch (usr_occupation){
             case "Student":
+            case "STUDENT":
             case "student": this.usr_occupation = "student";
             break;
             case "Elderly":
+            case "ELDERLY":
             case "elderly": this.usr_occupation = "elderly";
             break;
             case "Family":
+            case "FAMILY":
             case "family":  this.usr_occupation = "family";
             case "Individual":
+            case "INDIVIDUAL":
             case "individual": this.usr_occupation = "individual";
             break;
             default:    throw new IllegalArgumentException("Wrong input please try again");
@@ -60,10 +64,13 @@ public class TicketInfo {
     }
 
     public void setUsr_card_num(long usr_card_num) {
+
         String array = Long.toString(usr_card_num);
 
         if(array.toCharArray().length < 12 || array.toCharArray().length > 12){
             throw new IllegalArgumentException("Incorrect digit count in credit card");
+        } else {
+            this.usr_card_num = usr_card_num;
         }
 
         if(array.toCharArray()[0] == '3'){
@@ -80,7 +87,7 @@ public class TicketInfo {
     }
 
     public void setUsr_ticket_num(String ticket_num) {
-        if(ticket_num.toCharArray().length > 16 || ticket_num.toCharArray().length < 16){
+        if(ticket_num.toCharArray().length > 20 || ticket_num.toCharArray().length < 20){
             throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS");
         } else {
             this.usr_ticket_num = ticket_num;
