@@ -1,5 +1,7 @@
 package ie.atu;
 
+import java.util.Random;
+
 public class TicketInfo {
 
     //  usr input data
@@ -60,6 +62,8 @@ public class TicketInfo {
     public String getUsr_ticket_num() {
         return usr_ticket_num;
     }
+
+
 
     @Override
     public String toString() {

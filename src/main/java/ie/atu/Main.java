@@ -7,16 +7,18 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Random;
 
+import static ie.atu.GenerateValues.generateString;
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        Random rand = new Random();
-
         List<TicketInfo> new_ticket = new ArrayList<>();
 
         while(true){
+            System.out.println("\n==========================================================\n" + new_ticket.toString() + "\n==========================================================\n\r");
+
             System.out.println("ENTER NAME: ");
             String name = sc.nextLine();
 
@@ -29,33 +31,16 @@ public class Main {
             System.out.println("ENTER CARD NUMBER: ");
             long card_num = sc.nextLong();
 
-            //  ref_num is used for generating a ticket reference number
-            //  for loop works but no error correction used. ref num varies in size
-            String ref_num = "";
-            for(int i = 0; i < 40; i++){
+            // consumes nextline left-over
+            // DO NOT REMOVE FROM CODE
+            sc.nextLine();
 
-                //  generates letter/number from range 1 - z on ascii table. begin at 1 (49) and ends at z (122)
-                char buffer = (char) (rand.nextInt(73) + '1');
-                if(buffer > '1' && buffer < '9' || buffer > 'a' && buffer < 'z'){
-                    ref_num += buffer;
-                } else {
-                    i=i;
+            String ticket_num = generateString();
+            System.out.println("TICKET REFERENCE: " + ticket_num);
 
-                    //  generates new letter/number if outside range
-                    buffer = (char) (rand.nextInt(73) + '1');
-                }
-            }
+            new_ticket.add(new TicketInfo(name, occupation, age, card_num, ticket_num));
 
-            System.out.println("TICKET REFERENCE: " + ref_num);
 
-            new_ticket.add(new TicketInfo(name, occupation, age, card_num, ref_num));
-
-            System.out.println("\n==========================================================\n" + new_ticket.toString() + "\n==========================================================\n");
         }
     }
-
-    void Inputdata(){
-
-    }
-
 }
