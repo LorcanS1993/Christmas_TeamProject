@@ -11,7 +11,7 @@ class TicketInfoTest {
 
     @BeforeEach
     void setUp() {
-        my_ticket_info = new TicketInfo("Joe", "Student", 21, 4319123456789101l, "1234abcd5678efgh90ij");
+        my_ticket_info = new TicketInfo("Joe", "student", 21, 4319123456789101l, "1234abcd5678efgh90ij");
     }
 
     @Test
@@ -21,8 +21,8 @@ class TicketInfoTest {
 
     @Test
     void setUsr_occupation() {
-        char[] student = {'S', 't', 'u', 'd', 'e', 'n', 't'};
-        assertArrayEquals(student, my_ticket_info.getUsr_occupation().toCharArray());
+        String test = "student";
+        assertArrayEquals(test.toCharArray(), my_ticket_info.getUsr_occupation().toCharArray());
     }
 
     @Test
