@@ -2,6 +2,7 @@ package ie.atu;
 
 public class TicketInfo {
 
+    //  classes
     TicketAvailability ticket_avail = new TicketAvailability();
 
 
@@ -9,19 +10,23 @@ public class TicketInfo {
     private String usr_name;
     private String usr_occupation;
     private int usr_age;
+
+    //  remove and be replaced with other branch
     private long usr_card_num;
 
+    //  remove and be replaced with other branch
     private String usr_card_type;
 
     private String usr_seat;
 
-    //  output data
+    //  remove and be replaced with other branch
     private String usr_ticket_num;
 
     public TicketInfo(){
 
     }
 
+    //  debug purposes, do not create object using this constructor
     public TicketInfo(String usr_name, String usr_occupation, int usr_age, long usr_card_num, String usr_ticket_num){
         this.usr_name = usr_name;
         this.usr_occupation = usr_occupation;
@@ -91,16 +96,6 @@ public class TicketInfo {
         }
     }
 
-    public void setUsr_ticket_num(String ticket_num) {
-        if(ticket_num.toCharArray().length > 20 || ticket_num.toCharArray().length < 20){
-            throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS");
-        } else {
-            this.usr_ticket_num = ticket_num;
-        }
-    }
-
-
-
 
     public String getUsr_name() {
         return usr_name;
@@ -126,14 +121,12 @@ public class TicketInfo {
     @Override
     public String toString() {
         return "TicketInfo{" +
-                "seat=" + ticket_avail.getUser_seat() +
-                ", stand=" + ticket_avail.getUser_standing() +
-                ", usr_name='" + usr_name + '\'' +
+                "usr_name='" + usr_name + '\'' +
                 ", usr_occupation='" + usr_occupation + '\'' +
                 ", usr_age=" + usr_age +
                 ", usr_card_num=" + usr_card_num +
                 ", usr_card_type='" + usr_card_type + '\'' +
-                ", usr_ticket_num='" + usr_ticket_num + '\'' +
+                ", usr_ticket_num='" + ticket_avail.getTicket_ref() + '\'' +
                 '}';
     }
 }

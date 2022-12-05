@@ -5,6 +5,8 @@ public class TicketAvailability {
     private int user_standing; //30
     private int stadium_size = 100;
 
+    private String ticket_ref;
+
     public  TicketAvailability(){
     }
 
@@ -51,6 +53,21 @@ public class TicketAvailability {
             throw new IllegalArgumentException("Stadium Full");
         }
     }
+
+    public String getTicket_ref() {
+        return ticket_ref;
+    }
+
+    public void setTicket_ref(String ticket_ref) {
+        if(ticket_ref.toCharArray().length > 20 || ticket_ref.toCharArray().length < 20){
+            throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS");
+        } else {
+            this.ticket_ref = ticket_ref;
+        }
+    }
+
+
+
 
     @Override
     public String toString() {
