@@ -97,6 +97,8 @@ public class TicketInfo {
                 "usr_name='" + usr_name + '\'' +
                 ", usr_occupation='" + usr_occupation + '\'' +
                 ", usr_age=" + usr_age +
+                ", usr_seating=" + ticket_avail.getSeat_kind() +
+                ", seating=" + ticket_avail.getUser_seat() +
                 ", usr_card_num=" + ticket_pay.getCardNumber() +
                 ", usr_card_type='" + ticket_pay.getCardType() + '\'' +
                 ", usr_card_date='" + ticket_pay.getCardDate() + '\'' +
