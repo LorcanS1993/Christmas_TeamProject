@@ -16,6 +16,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         List<TicketInfo> new_ticket = new ArrayList<>();
+        TicketAvailability max_tickets = new TicketAvailability(1, 10);
+
 
         while(true){
             TicketInfo ticket = new TicketInfo();
@@ -31,6 +33,17 @@ public class Main {
             System.out.print("\nENTER AGE (MUST BE OLDER THAN 16): ");
             ticket.setUsr_age(sc.nextInt());
 
+            sc.nextLine();
+
+
+            System.out.println("\n\n==========================================================\nSEATING\n==========================================================\n\r");
+
+            System.out.print("SEATING OR STANDING ARRANGEMENTS: ");
+            String buffer = sc.nextLine();
+
+            ticket.ticket_avail.setSeat_kind(buffer);
+
+
             System.out.println("\n\n==========================================================\nPAYMENTS\n==========================================================\n\r");
 
             System.out.print("\nENTER CARD NUMBER: ");
@@ -40,7 +53,7 @@ public class Main {
             // DO NOT REMOVE FROM CODE
             sc.nextLine();
 
-            System.out.print("\nENTER CARD DATE: ");
+            System.out.print("\nENTER CARD DATE (MM/YY): ");
             ticket.ticket_pay.setCardDate(sc.nextLine());
 
             System.out.print("\nENTER CARD CCV: ");
