@@ -18,7 +18,7 @@ class PaymentTest {
 
     @Test
     void getCardNumber() {
-        
+
     }
 
     @Test
