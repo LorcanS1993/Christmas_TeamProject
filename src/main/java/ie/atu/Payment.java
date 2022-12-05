@@ -10,6 +10,8 @@ String cardCCV;
     }
 
     public void setCardNumber(String cardNumber) {
+        if (cardNumber.length() != 12)
+            throw new IllegalArgumentException("Invalid card number.");
         this.cardNumber = cardNumber;
     }
 
@@ -18,6 +20,8 @@ String cardCCV;
     }
 
     public void setCardDate(String cardDate) {
+        if (cardDate.length() != 5)
+            throw new IllegalArgumentException("Invalid card date.");
         this.cardDate = cardDate;
     }
 
@@ -26,6 +30,8 @@ String cardCCV;
     }
 
     public void setCardCCV(String cardCCV) {
+        if (cardCCV.length() != 3)
+            throw new IllegalArgumentException("Invalid CCV.");
         this.cardCCV = cardCCV;
     }
 }
