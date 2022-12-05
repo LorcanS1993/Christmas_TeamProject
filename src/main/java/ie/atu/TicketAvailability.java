@@ -1,14 +1,17 @@
 package ie.atu;
 
 public class TicketAvailability {
-    public int user_seat; // 70
-    public int user_standing; //30
-    public int stadium_size = 100;
+    private int user_seat; // 70
+    private int user_standing; //30
+    private int stadium_size = 100;
 
-    public TicketAvailability(int user_seat, int use, int stadium_size) {
-        this.user_seat = user_seat;
-        this.user_standing = use;
-        this.stadium_size = stadium_size;
+    public  TicketAvailability(){
+    }
+
+    public TicketAvailability(int max_user_seat, int max_user_standing) {
+        this.user_seat = max_user_seat;
+        this.user_standing = max_user_standing;
+        this.stadium_size = max_user_seat + max_user_standing;
     }
 
     public int getUser_seat() {
@@ -17,7 +20,7 @@ public class TicketAvailability {
 
     public void setUser_seat(int user_seat) {
 
-        if (String.valueOf(user_seat).length() <= 70) {
+        if (user_seat <= 70) {
             this.user_seat = user_seat; }
         else {
             throw new IllegalArgumentException("Over seating capacity");
@@ -29,7 +32,7 @@ public class TicketAvailability {
     }
 
     public void setUser_standing(int user_standing) {
-        if (String.valueOf(user_standing).length() <= 30) {
+        if (user_standing <= 30) {
             this.user_standing = user_standing;
         } else {
             throw new IllegalArgumentException("Over standing capacity");

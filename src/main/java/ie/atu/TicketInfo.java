@@ -2,6 +2,9 @@ package ie.atu;
 
 public class TicketInfo {
 
+    TicketAvailability ticket_avail = new TicketAvailability();
+
+
     //  usr input data
     private String usr_name;
     private String usr_occupation;
@@ -9,6 +12,8 @@ public class TicketInfo {
     private long usr_card_num;
 
     private String usr_card_type;
+
+    private String usr_seat;
 
     //  output data
     private String usr_ticket_num;
@@ -67,7 +72,7 @@ public class TicketInfo {
 
         String array = Long.toString(usr_card_num);
 
-        if(array.toCharArray().length < 12 || array.toCharArray().length > 12){
+        if(array.toCharArray().length < 16 || array.toCharArray().length > 16){
             throw new IllegalArgumentException("Incorrect digit count in credit card");
         } else {
             this.usr_card_num = usr_card_num;
@@ -95,6 +100,8 @@ public class TicketInfo {
     }
 
 
+
+
     public String getUsr_name() {
         return usr_name;
     }
@@ -116,15 +123,17 @@ public class TicketInfo {
     }
 
 
-
     @Override
     public String toString() {
-        return "ticketInfo{" +
-                "usr_name='" + usr_name + '\'' +
+        return "TicketInfo{" +
+                "seat=" + ticket_avail.getUser_seat() +
+                ", stand=" + ticket_avail.getUser_standing() +
+                ", usr_name='" + usr_name + '\'' +
                 ", usr_occupation='" + usr_occupation + '\'' +
                 ", usr_age=" + usr_age +
-                ", usr_card_num='" + usr_card_num + '\'' +
+                ", usr_card_num=" + usr_card_num +
+                ", usr_card_type='" + usr_card_type + '\'' +
                 ", usr_ticket_num='" + usr_ticket_num + '\'' +
-                "}\n";
+                '}';
     }
 }

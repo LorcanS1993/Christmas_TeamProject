@@ -33,6 +33,12 @@ public class Main {
             System.out.print("\nENTER CARD NUMBER: ");
             ticket.setUsr_card_num(sc.nextLong());
 
+
+            System.out.print("DO YOU WANT SEATING OR STANDING TICKETS: ");
+            String input = sc.nextLine();
+
+
+
             // consumes nextlong left-over
             // DO NOT REMOVE FROM CODE
             sc.nextLine();
