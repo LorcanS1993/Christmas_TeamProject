@@ -4,6 +4,7 @@ public class TicketInfo {
 
     //  classes
     TicketAvailability ticket_avail = new TicketAvailability();
+    Payment ticket_pay = new Payment();
 
 
     //  usr input data
@@ -13,11 +14,6 @@ public class TicketInfo {
 
     //  remove and be replaced with other branch
     private long usr_card_num;
-
-    //  remove and be replaced with other branch
-    private String usr_card_type;
-
-    private String usr_seat;
 
     //  remove and be replaced with other branch
     private String usr_ticket_num;
@@ -73,29 +69,6 @@ public class TicketInfo {
 
     }
 
-    public void setUsr_card_num(long usr_card_num) {
-
-        String array = Long.toString(usr_card_num);
-
-        if(array.toCharArray().length < 16 || array.toCharArray().length > 16){
-            throw new IllegalArgumentException("Incorrect digit count in credit card");
-        } else {
-            this.usr_card_num = usr_card_num;
-        }
-
-        if(array.toCharArray()[0] == '3'){
-            this.usr_card_type = "American Express";
-        } else if (array.toCharArray()[0] == '4') {
-             this.usr_card_type = "Visa Card";
-        } else if (array.toCharArray()[0] == '5') {
-            this.usr_card_type = "Mastercard";
-        } else if (array.toCharArray()[0] == '6') {
-            this.usr_card_type = "Discovery Cards";
-        } else {
-            throw new IllegalArgumentException("Incorrect card digits");
-        }
-    }
-
 
     public String getUsr_name() {
         return usr_name;
@@ -124,8 +97,8 @@ public class TicketInfo {
                 "usr_name='" + usr_name + '\'' +
                 ", usr_occupation='" + usr_occupation + '\'' +
                 ", usr_age=" + usr_age +
-                ", usr_card_num=" + usr_card_num +
-                ", usr_card_type='" + usr_card_type + '\'' +
+                ", usr_card_num=" + ticket_pay.getCardNumber() +
+                ", usr_card_type='" + ticket_pay.getCardType() + '\'' +
                 ", usr_ticket_num='" + ticket_avail.getTicket_ref() + '\'' +
                 '}';
     }

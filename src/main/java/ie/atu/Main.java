@@ -20,7 +20,7 @@ public class Main {
         while(true){
             TicketInfo ticket = new TicketInfo();
 
-            System.out.println("\n\n==========================================================\n==========================================================\n\r");
+            System.out.println("\n\n==========================================================\nUSER INFO\n==========================================================\n\r");
 
             System.out.print("ENTER NAME (MUST BE GREATER THAN 2 LETTERS): ");
             ticket.setUsr_name(sc.nextLine());
@@ -31,8 +31,16 @@ public class Main {
             System.out.print("\nENTER AGE (MUST BE OLDER THAN 16): ");
             ticket.setUsr_age(sc.nextInt());
 
+            System.out.println("\n\n==========================================================\nPAYMENTS\n==========================================================\n\r");
+
             System.out.print("\nENTER CARD NUMBER: ");
-            ticket.setUsr_card_num(sc.nextLong());
+            ticket.ticket_pay.setCardNumber(sc.nextLong());
+
+            System.out.print("\nENTER CARD DATE: ");
+            ticket.ticket_pay.setCardDate(sc.nextLine());
+
+            System.out.print("\nENTER CARD CCV: ");
+            ticket.ticket_pay.setCardCCV(sc.nextInt());
 
 
             // consumes nextlong left-over
