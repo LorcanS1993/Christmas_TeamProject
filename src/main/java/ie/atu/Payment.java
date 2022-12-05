@@ -45,7 +45,9 @@ public class Payment {
     }
 
     public void setCardDate(String cardDate) {
-        if (cardDate.toCharArray().length != 5)
+        String buffer = cardDate;
+
+        if (buffer.toCharArray().length != 5)
             throw new IllegalArgumentException("Invalid card date.");
         this.cardDate = cardDate;
     }

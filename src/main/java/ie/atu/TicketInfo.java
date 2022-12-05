@@ -99,6 +99,8 @@ public class TicketInfo {
                 ", usr_age=" + usr_age +
                 ", usr_card_num=" + ticket_pay.getCardNumber() +
                 ", usr_card_type='" + ticket_pay.getCardType() + '\'' +
+                ", usr_card_date='" + ticket_pay.getCardDate() + '\'' +
+                ", usr_card_ccv='" + ticket_pay.getCardCCV() + '\'' +
                 ", usr_ticket_num='" + ticket_avail.getTicket_ref() + '\'' +
                 '}';
     }

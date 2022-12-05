@@ -36,6 +36,8 @@ public class Main {
             System.out.print("\nENTER CARD NUMBER: ");
             ticket.ticket_pay.setCardNumber(sc.nextLong());
 
+            sc.nextLine();
+
             System.out.print("\nENTER CARD DATE: ");
             ticket.ticket_pay.setCardDate(sc.nextLine());
 
