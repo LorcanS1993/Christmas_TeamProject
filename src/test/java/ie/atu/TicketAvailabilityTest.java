@@ -13,6 +13,7 @@ class TicketAvailabilityTest {
     @BeforeEach
     void setUp() {
         TickNum = new TicketAvailability(1,1);
+        TickNum.setStadium_size(100);
     }
 
     @Test
