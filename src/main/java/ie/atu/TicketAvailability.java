@@ -93,10 +93,15 @@ public class TicketAvailability {
     }
 
     public void setTicket_ref(String ticket_ref) {
-        if(ticket_ref.toCharArray().length > 20 || ticket_ref.toCharArray().length < 20){
-            throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS");
-        } else {
+        if(ticket_ref.length() == 20){
             this.ticket_ref = ticket_ref;
+        } else {
+            if(ticket_ref.length() < 20){
+                throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS (LESS THAN 20)");
+            } else {
+                throw new IllegalArgumentException("ERROR TICKET REFERENCE LENGTH DOESN'T MEET REQUIREMENTS (GREATER THAN 20)");
+
+            }
         }
     }
 

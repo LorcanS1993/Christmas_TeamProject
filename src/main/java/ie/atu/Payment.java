@@ -69,5 +69,15 @@ public class Payment {
     public String getCardType() {
         return cardType;
     }
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "cardNumber=" + cardNumber +
+                ", cardDate='" + cardDate + '\'' +
+                ", cardCCV=" + cardCCV +
+                ", cardType='" + cardType + '\'' +
+                '}';
+    }
 }
 

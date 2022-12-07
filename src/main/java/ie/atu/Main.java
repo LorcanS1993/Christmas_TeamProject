@@ -3,22 +3,45 @@ package ie.atu;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.Random;
 
 import static ie.atu.GenerateValues.generateString;
-import static ie.atu.TicketAvailability.*;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        List<TicketInfo> new_ticket = new ArrayList<>();
+
+        TicketInfo new_ticket = new TicketInfo();
+
+        new_ticket.user_info.setUsr_name("Joe");
+        new_ticket.user_info.setUsr_age(32);
+        new_ticket.user_info.setUsr_occupation("Student");
+
+        new_ticket.ticket_avail.setSeat_kind("sit");
+        new_ticket.ticket_avail.setTicket_ref(generateString());
+
+        new_ticket.ticket_pay.setCardNumber(6123456789012345l);
+        new_ticket.ticket_pay.setCardDate("12/24");
+        new_ticket.ticket_pay.setCardCCV(451);
+
+        System.out.print(new_ticket.toString());
+
+
+
+
+        /*
+        //List<TicketInfo> new_ticket = new ArrayList<>();
         TicketAvailability max_tickets = new TicketAvailability(1, 10);
 
+        List<TicketInfo> new_ticket = List.of(
+                //new TicketInfo("Joe", "student", 24, 4123456789012345l)
+                //new TicketInfo()
+        );
 
+
+        /*
         while(true){
             TicketInfo ticket = new TicketInfo();
 
@@ -73,5 +96,6 @@ public class Main {
 
             System.out.printf(new_ticket.toString());
         }
+         */
     }
 }
