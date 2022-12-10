@@ -20,6 +20,7 @@ public class Main {
         new_ticket.user_info.setUsr_occupation("Student");
 
         new_ticket.ticket_avail.setSeat_kind("sit");
+        new_ticket.ticket_Parking.setParking_Option("Yes");
         new_ticket.ticket_avail.setTicket_ref(generateString());
 
         new_ticket.ticket_pay.setCardNumber(6123456789012345l);
@@ -27,9 +28,6 @@ public class Main {
         new_ticket.ticket_pay.setCardCCV(451);
 
         System.out.print(new_ticket.toString());
-
-
-
 
         /*
         //List<TicketInfo> new_ticket = new ArrayList<>();

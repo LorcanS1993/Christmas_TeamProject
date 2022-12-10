@@ -1,17 +1,11 @@
 package ie.atu;
 
-import java.util.Scanner;
-
 public class ParkingAvailability {
     private static int NoOfParkSpaces = 100;
-
     private static int user_Parking = 0;
     private static int user_NotParking = 0;
-    private static int max_Parking;
-
+    public static int max_Parking;
     private String Parking_Option;
-
-
     public ParkingAvailability(int max_Parking) {
         this.max_Parking = max_Parking;
         this.NoOfParkSpaces = max_Parking;
@@ -30,34 +24,23 @@ public class ParkingAvailability {
     }
     public void setParking_Option(String Parking_Option) {
         String buffer = Parking_Option;
-
         switch (buffer) {
-            case "yes":
-            case "Yes":
-            case "YES":
+            case "yes", "Yes", "YES" -> {
                 this.Parking_Option = "Yes";
-
                 if (++user_Parking > max_Parking) {
                     throw new IllegalArgumentException("No Parking AVAILABLE");
                 }
-
-                break;
-            case "no":
-            case "No":
-            case "NO":
+            }
+            case "no", "No", "NO" -> {
                 this.Parking_Option = "No";
-
-                if (++user_NotParking <= max_Parking) {
+                if (++user_NotParking < max_Parking) {
                     throw new IllegalArgumentException("Parking Space Available");
                 }
-                break;
-            default:
-                throw new IllegalArgumentException("INCORRECT INPUT");
+            }
+            default -> throw new IllegalArgumentException("INCORRECT INPUT");
         }
     }
-
     public int getNoOfParkSpaces() {return NoOfParkSpaces;}
-
     public void setNoOfParkSpaces(int NoOfParkSpaces) {
         if (NoOfParkSpaces <= 100) {
             this.NoOfParkSpaces = NoOfParkSpaces;
