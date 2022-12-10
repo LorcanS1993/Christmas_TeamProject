@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static ie.atu.GenerateValues.generateString;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -20,7 +18,7 @@ public class Main {
         new_ticket.user_info.setUsr_occupation("Student");
 
         new_ticket.ticket_avail.setSeat_kind("sit");
-        new_ticket.ticket_avail.setTicket_ref(generateString());
+
 
         new_ticket.ticket_pay.setCardNumber(6123456789012345l);
         new_ticket.ticket_pay.setCardDate("12/24");
