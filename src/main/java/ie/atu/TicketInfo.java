@@ -4,7 +4,7 @@ public class TicketInfo {
 
     //  classes
     UserInfo user_info = new UserInfo();
-    TicketAvailability ticket_avail = new TicketAvailability(1, 1);
+    TicketAvailability ticket_avail = new TicketAvailability(70, 30);
     Payment ticket_pay = new Payment();
 
 
