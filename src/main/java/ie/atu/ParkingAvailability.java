@@ -8,7 +8,9 @@ public class ParkingAvailability {
     public ParkingAvailability(int max_Parking) {
         this.max_Parking = max_Parking;
     }
-    public int getUser_Parking(){return user_Parking;}
+    public int getUser_Parking(){
+        return user_Parking;
+    }
     public void setUser_Parking(int user_Parking){
         if(user_Parking <= max_Parking){
             this.user_Parking = user_Parking;

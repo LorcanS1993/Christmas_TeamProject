@@ -21,19 +21,20 @@ public class Payment {
     }
 
     public void setCardNumber(long cardNumber) {
-        String buffer = Long.toString(cardNumber);
-
-        if (buffer.toCharArray().length != 16)
+        if (Long.toString(cardNumber).length() != 16){
             throw new IllegalArgumentException("Invalid card number.");
+        }
         this.cardNumber = cardNumber;
 
-        if(buffer.toCharArray()[0] == '3'){
+        int num = Long.toString(cardNumber).toCharArray()[0];
+
+        if(num == '3'){
             this.cardType = "American Express";
-        } else if (buffer.toCharArray()[0] == '4') {
+        } else if (num == '4') {
             this.cardType = "Visa Card";
-        } else if (buffer.toCharArray()[0] == '5') {
+        } else if (num == '5') {
             this.cardType = "Mastercard";
-        } else if (buffer.toCharArray()[0] == '6') {
+        } else if (num == '6') {
             this.cardType = "Discovery Cards";
         } else {
             throw new IllegalArgumentException("Incorrect card digits");
@@ -64,6 +65,10 @@ public class Payment {
         if (buffer.toCharArray().length != 3)
             throw new IllegalArgumentException("Invalid CCV.");
         this.cardCCV = cardCCV;
+    }
+
+    public String getCardType() {
+        return cardType;
     }
 
     @Override
