@@ -4,7 +4,7 @@ public class TicketInfo {
 
     //  classes
     UserInfo user_info = new UserInfo();
-    TicketAvailability ticket_avail = new TicketAvailability(1, 1);
+    TicketAvailability ticket_avail = new TicketAvailability(70, 30);
 
     ParkingAvailability ticket_Parking = new ParkingAvailability(2);
     Payment ticket_pay = new Payment();
@@ -13,13 +13,13 @@ public class TicketInfo {
     public TicketInfo(){
     }
 
-    public TicketInfo(String name, String occupation, int age, int seat, int stand, String parking, long card_number, String card_date, int card_ccv){
+    public TicketInfo(String name, String occupation, int age, String seat, String parking, long card_number, String card_date, int card_ccv){
         this.user_info.setUsr_name(name);
         this.user_info.setUsr_occupation(occupation);
         this.user_info.setUsr_age(age);
 
-        this.ticket_avail.setUser_seat(seat);
-        this.ticket_avail.setUser_standing(stand);
+        this.ticket_avail.setSeat_kind(seat);
+
 
         this.ticket_Parking.setParking_Option(parking);
 

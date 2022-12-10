@@ -3,7 +3,6 @@ package ie.atu;
 public class ParkingAvailability {
     public static int max_Parking;
     private static int user_Parking = 0;
-    private static int user_NotParking = 0;
     private String Parking_Option;
 
     public ParkingAvailability(int max_Parking) {
@@ -41,9 +40,8 @@ public class ParkingAvailability {
     public String toString() {
         return "ParkingAvailability{" +
                 "Parking_Option='" + Parking_Option + '\'' +
-                ", user_parking='" + user_Parking + '\'' +
-                ", user_NotParking='" + user_NotParking + '\'' +
-                ", max_Parking='" + max_Parking +
+                ", user_parking=" + user_Parking +
+                ", max_Parking=" + max_Parking +
                 '}';
     }
 }

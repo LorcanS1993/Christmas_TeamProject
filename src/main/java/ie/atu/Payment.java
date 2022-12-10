@@ -66,10 +66,6 @@ public class Payment {
         this.cardCCV = cardCCV;
     }
 
-    public String getCardType() {
-        return cardType;
-    }
-
     @Override
     public String toString() {
         return "Payment{" +

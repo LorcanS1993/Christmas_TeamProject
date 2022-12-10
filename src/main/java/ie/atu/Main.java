@@ -27,11 +27,11 @@ public class Main {
         new_ticket.ticket_pay.setCardDate("12/24");
         new_ticket.ticket_pay.setCardCCV(451);
 
-        System.out.print(new_ticket.toString());
+        System.out.print(new_ticket.toString() + '\n');
 
-        TicketInfo ticket = new TicketInfo("Morgan", "student", 23, 1, 0, "no", 4123456789012345l, "12/24", 451);
+        TicketInfo ticket = new TicketInfo("Morgan", "student", 23, "stand", "no", 4123456789012345l, "12/24", 451);
 
-        System.out.print(ticket);
+        System.out.print(ticket.toString());
 
 
         /*

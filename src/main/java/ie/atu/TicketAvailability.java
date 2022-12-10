@@ -27,7 +27,7 @@ public class TicketAvailability {
 
     public void setUser_seat(int user_seat) {
 
-        if (user_seat <= 70) {
+        if (user_seat <= max_sit) {
             this.user_seat = user_seat; }
         else {
             throw new IllegalArgumentException("Over seating capacity");
@@ -39,7 +39,7 @@ public class TicketAvailability {
     }
 
     public void setUser_standing(int user_standing) {
-        if (user_standing <= 30) {
+        if (user_standing <= max_stand) {
             this.user_standing = user_standing;
         } else {
             throw new IllegalArgumentException("Over standing capacity");
@@ -111,7 +111,8 @@ public class TicketAvailability {
     @Override
     public String toString() {
         return "TicketAvailability{" +
-                "user_seat=" + user_seat +
+                "user_seat_kind='" + seat_kind + '\'' +
+                ", user_seat=" + user_seat +
                 ", user_standing=" + user_standing +
                 ", stadium_size=" + stadium_size +
                 '}';

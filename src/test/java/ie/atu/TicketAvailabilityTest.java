@@ -12,39 +12,35 @@ class TicketAvailabilityTest {
 
     @BeforeEach
     void setUp() {
-        TickNum = new TicketAvailability(1,1);
-        TickNum.setStadium_size(100);
-    }
-
-    @Test
-    void getUser_seat() {
+        TickNum = new TicketAvailability(2,2);
     }
 
     @Test
     void setUser_seat() {
-        String buffer = Long.toString(TickNum.getUser_seat());
-        assertEquals(1, buffer.toCharArray(). length);
-    }
-
-    @Test
-    void getUser_standing() {
+        TickNum.setUser_seat(1);
+        assertEquals(1, TickNum.getUser_seat());
     }
 
     @Test
     void setUser_standing() {
-        String buffer = Long.toString(TickNum.getUser_standing());
-        assertEquals(1, buffer.toCharArray(). length);
+        TickNum.setUser_standing(1);
+        assertEquals(1, TickNum.getUser_standing());
 
     }
 
     @Test
-    void getStadium_size() {
-    }
+    void SetSeat_kindSit(){
+        String testString = "sit";
 
+        TickNum.setSeat_kind("SIT");
+        assertEquals(testString, TickNum.getSeat_kind());
+    }
     @Test
-    void setStadium_size() {
-        String buffer = Long.toString(TickNum.getStadium_size());
-        assertEquals(3, buffer.toCharArray(). length);
+    void SetSeat_kindStand(){
+        String testString = "stand";
+
+        TickNum.setSeat_kind("Stand");
+        assertEquals(testString, TickNum.getSeat_kind());
     }
 
     @AfterEach
