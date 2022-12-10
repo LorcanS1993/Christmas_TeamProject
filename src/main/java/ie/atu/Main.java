@@ -29,6 +29,11 @@ public class Main {
 
         System.out.print(new_ticket.toString());
 
+        TicketInfo ticket = new TicketInfo("Morgan", "student", 23, 1, 0, "no", 4123456789012345l, "12/24", 451);
+
+        System.out.print(ticket);
+
+
         /*
         //List<TicketInfo> new_ticket = new ArrayList<>();
         TicketAvailability max_tickets = new TicketAvailability(1, 10);

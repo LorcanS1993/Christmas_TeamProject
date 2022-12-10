@@ -1,18 +1,17 @@
 package ie.atu;
 
 public class ParkingAvailability {
-    private static int NoOfParkSpaces = 100;
+    public static int max_Parking;
     private static int user_Parking = 0;
     private static int user_NotParking = 0;
-    public static int max_Parking;
     private String Parking_Option;
+
     public ParkingAvailability(int max_Parking) {
         this.max_Parking = max_Parking;
-        this.NoOfParkSpaces = max_Parking;
     }
     public int getUser_Parking(){return user_Parking;}
     public void setUser_Parking(int user_Parking){
-        if(user_Parking <= 100){
+        if(user_Parking <= max_Parking){
             this.user_Parking = user_Parking;
         }
         else{
@@ -26,27 +25,26 @@ public class ParkingAvailability {
         String buffer = Parking_Option;
         switch (buffer) {
             case "yes", "Yes", "YES" -> {
-                this.Parking_Option = "Yes";
+                this.Parking_Option = "yes";
                 if (++user_Parking > max_Parking) {
                     throw new IllegalArgumentException("No Parking AVAILABLE");
                 }
             }
             case "no", "No", "NO" -> {
-                this.Parking_Option = "No";
-                if (++user_NotParking < max_Parking) {
-                    throw new IllegalArgumentException("Parking Space Available");
-                }
+                this.Parking_Option = "no";
             }
             default -> throw new IllegalArgumentException("INCORRECT INPUT");
         }
     }
-    public int getNoOfParkSpaces() {return NoOfParkSpaces;}
-    public void setNoOfParkSpaces(int NoOfParkSpaces) {
-        if (NoOfParkSpaces <= 100) {
-            this.NoOfParkSpaces = NoOfParkSpaces;
-        } else {
-            throw new IllegalArgumentException("Parking lot is Full");
-        }
+
+    @Override
+    public String toString() {
+        return "ParkingAvailability{" +
+                "Parking_Option='" + Parking_Option + '\'' +
+                ", user_parking='" + user_Parking + '\'' +
+                ", user_NotParking='" + user_NotParking + '\'' +
+                ", max_Parking='" + max_Parking +
+                '}';
     }
 }
 
