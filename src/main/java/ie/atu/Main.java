@@ -5,34 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import static ie.atu.GenerateValues.generateString;
 
+@RestController
+@SpringBootApplication
+@RequestMapping(path = "api/ticket")
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
-
-        TicketInfo new_ticket = new TicketInfo();
-
-        new_ticket.user_info.setUsr_name("Joe");
-        new_ticket.user_info.setUsr_age(32);
-        new_ticket.user_info.setUsr_occupation("Student");
-
-        new_ticket.ticket_avail.setSeat_kind("sit");
-        new_ticket.ticket_Parking.setParking_Option("Yes");
-        new_ticket.ticket_avail.setTicket_ref(generateString());
-
-        new_ticket.ticket_pay.setCardNumber(6123456789012345l);
-        new_ticket.ticket_pay.setCardDate("12/24");
-        new_ticket.ticket_pay.setCardCCV(451);
-
-        System.out.print(new_ticket.toString() + '\n');
-
-        TicketInfo ticket = new TicketInfo("Morgan", "student", 23, "stand", "no", 4123456789012345l, "12/24", 451);
-
-        System.out.print(ticket.toString());
-
+        SpringApplication.run(Main.class, args);
 
         /*
         //List<TicketInfo> new_ticket = new ArrayList<>();
@@ -100,5 +87,29 @@ public class Main {
             System.out.printf(new_ticket.toString());
         }
          */
+    }
+
+    /*
+    @GetMapping
+    public String getTicketInfo(){
+        List<TicketInfo> tickets = List.of(
+                new TicketInfo("Morgan", "student", 23, "stand", "no", 4123456789012345l, "12/24", 451),
+                new TicketInfo("Joe", "Individual", 28, "sit", "Yes", 5123456789012345l, "11/23", 557),
+                new TicketInfo("joy", "FAMILY", 32, "stand", "YES", 6123456789012345l, "06/25", 332)
+        );
+        return tickets.toString();
+    }
+
+     */
+
+    @GetMapping
+    public String tickets(){
+        List<TicketInfo> tickets = List.of(
+                new TicketInfo("Morgan", "student", 23, "stand", "no", 4123456789012345l, "12/24", 451),
+                new TicketInfo("Joe", "Individual", 28, "sit", "Yes", 5123456789012345l, "11/23", 557),
+                new TicketInfo("joy", "FAMILY", 32, "stand", "YES", 6123456789012345l, "06/25", 332)
+        );
+
+        return tickets.toString();
     }
 }

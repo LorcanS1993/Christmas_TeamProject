@@ -1,5 +1,6 @@
 package ie.atu;
 
+
 public class TicketInfo {
 
     //  classes
@@ -28,6 +29,7 @@ public class TicketInfo {
         this.ticket_pay.setCardCCV(card_ccv);
 
     }
+
 
     @Override
     public String toString() {

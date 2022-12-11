@@ -74,10 +74,10 @@ public class Payment {
     @Override
     public String toString() {
         return "Payment{" +
-                "cardNumber=" + cardNumber +
-                ", cardDate='" + cardDate + '\'' +
-                ", cardCCV=" + cardCCV +
-                ", cardType='" + cardType + '\'' +
+                "cardNumber=" + getCardNumber() +
+                ", cardDate='" + getCardDate() + '\'' +
+                ", cardCCV=" + getCardCCV() +
+                ", cardType='" + getCardType() + '\'' +
                 '}';
     }
 }

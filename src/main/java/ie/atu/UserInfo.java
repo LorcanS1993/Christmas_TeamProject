@@ -74,9 +74,9 @@ public class UserInfo {
     @Override
     public String toString() {
         return "UserInfo{" +
-                "usr_name='" + usr_name + '\'' +
-                ", usr_occupation='" + usr_occupation + '\'' +
-                ", usr_age=" + usr_age +
+                "usr_name='" + getUsr_name() + '\'' +
+                ", usr_occupation='" + getUsr_occupation() + '\'' +
+                ", usr_age=" + getUsr_age() +
                 '}';
     }
 }

@@ -38,12 +38,16 @@ public class ParkingAvailability {
         }
     }
 
+    public static int getMax_Parking() {
+        return max_Parking;
+    }
+
     @Override
     public String toString() {
         return "ParkingAvailability{" +
-                "Parking_Option='" + Parking_Option + '\'' +
-                ", user_parking=" + user_Parking +
-                ", max_Parking=" + max_Parking +
+                "Parking_Option='" + getParking_Option() + '\'' +
+                ", user_parking=" + getUser_Parking() +
+                ", max_Parking=" + getMax_Parking() +
                 '}';
     }
 }

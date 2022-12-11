@@ -111,10 +111,10 @@ public class TicketAvailability {
     @Override
     public String toString() {
         return "TicketAvailability{" +
-                "user_seat_kind='" + seat_kind + '\'' +
-                ", user_seat=" + user_seat +
-                ", user_standing=" + user_standing +
-                ", stadium_size=" + stadium_size +
+                "user_seat_kind='" + getSeat_kind() + '\'' +
+                ", user_seat=" + getUser_seat() +
+                ", user_standing=" + getUser_standing() +
+                ", stadium_size=" + getStadium_size() +
                 '}';
     }
 }
