@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IE"/>
     <property name="sun.boot.library.path" value="C:\Users\maghn\.jdks\openjdk-19.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\maghn\AppData\Local\Temp\surefire4573728892929896864\surefirebooter-20221211195047069_3.jar C:\Users\maghn\AppData\Local\Temp\surefire4573728892929896864 2022-12-11T19-50-46_756-jvmRun1 surefire-20221211195047069_1tmp surefire_0-20221211195047069_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\maghn\AppData\Local\Temp\surefire195338385543220506\surefirebooter-20221211200242043_3.jar C:\Users\maghn\AppData\Local\Temp\surefire195338385543220506 2022-12-11T20-02-41_714-jvmRun1 surefire-20221211200242043_1tmp surefire_0-20221211200242043_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\maghn\Documents\java projects\Christmas_TeamProject\target\test-classes;C:\Users\maghn\Documents\java projects\Christmas_TeamProject\target\classes;C:\Users\maghn\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\maghn\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maghn\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\maghn\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\maghn\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\maghn\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maghn\AppData\Local\Temp\surefire4573728892929896864\surefirebooter-20221211195047069_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maghn\AppData\Local\Temp\surefire195338385543220506\surefirebooter-20221211200242043_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -59,9 +59,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="setUser_standing" classname="ie.atu.TicketAvailabilityTest" time="0.002"/>
-  <testcase name="SetSeat_kindSit" classname="ie.atu.TicketAvailabilityTest" time="0.002"/>
+  <testcase name="setUser_standing" classname="ie.atu.TicketAvailabilityTest" time="0.001"/>
+  <testcase name="SetSeat_kindSit" classname="ie.atu.TicketAvailabilityTest" time="0.001"/>
   <testcase name="SetSeat_kindStand" classname="ie.atu.TicketAvailabilityTest" time="0.001"/>
-  <testcase name="setTicketRef" classname="ie.atu.TicketAvailabilityTest" time="0.008"/>
+  <testcase name="setTicketRef" classname="ie.atu.TicketAvailabilityTest" time="0.009"/>
   <testcase name="setUser_seat" classname="ie.atu.TicketAvailabilityTest" time="0.001"/>
 </testsuite>
