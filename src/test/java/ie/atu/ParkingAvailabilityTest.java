@@ -39,6 +39,11 @@ class ParkingAvailabilityTest {
 
         assertEquals(testString, ParkingNo.getParking_Option());
     }
+    //  @Test
+    //   void ParkingAvailabilityConstructorTest()
+    //      {
+    //          assertThrows(IllegalArgumentException.class, () -> { new ParkingAvailability(1);} );
+    //      }
 
     @AfterEach
     void tearDown() {

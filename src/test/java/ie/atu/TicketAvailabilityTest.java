@@ -57,6 +57,12 @@ class TicketAvailabilityTest {
 
         assertEquals(testValue, TickNum.getTicket_ref().length());
     }
+    //  @Test
+    //  void  TicketAvailabilityConstructorTest()
+    //  {
+    //      assertThrows(IllegalArgumentException.class, () -> { new TicketAvailability(0,0);} );
+    //  }
+
 
     @AfterEach
     void tearDown() {

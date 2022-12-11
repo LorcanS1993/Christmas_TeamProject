@@ -8,10 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PaymentTest {
     Payment myCard;
+    Payment badCard;
 
     @BeforeEach
     void setUp() {
         myCard = new Payment();
+        badCard = new Payment();
     }
 
     //  checks if card number equals to testValue
@@ -71,6 +73,13 @@ class PaymentTest {
 
         assertEquals("Discovery Cards", myCard.getCardType());
     }
+    //  @Test
+    // void testPaymentConstructor(){
+    //    badCard.cardDate = "1";
+    //    badCard.cardNumber = 1;
+    //   badCard.cardCCV =1 ;
+    //    assertThrows(IllegalArgumentException.class, () -> { new Payment(badCard.cardNumber, badCard.cardDate, badCard.cardCCV);} );
+    //}
 
     @AfterEach
     void tearDown() {

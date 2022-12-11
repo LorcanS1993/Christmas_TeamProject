@@ -62,4 +62,9 @@ class UserInfoTest {
 
         assertEquals(testValue, user_info.getUsr_age());
     }
+    //  @Test
+    //  void  userInfoConstructorTest()
+    //  {
+    //      assertThrows(IllegalArgumentException.class, () -> { new UserInfo ();} );
+    //  }
 }
